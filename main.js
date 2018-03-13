@@ -17,7 +17,7 @@ while (order.length < texts.length) {
 
 const main = document.querySelector('main');
 order.forEach(async index => {
-	const text = await fetch(`http://www.theoleanse.com/RlVDSw-/texts/${texts[index]}.txt`).then(res => res.text());
+	const text = await fetch(`http://theoleanse.com/RlVDSw-/texts/${texts[index]}.txt`).then(res => res.text());
 	const p = document.createElement('p');
 	p.innerText = text;
 	p.classList.add('lh-copy-ns', 'pb4', 'bb', 'mb4')
