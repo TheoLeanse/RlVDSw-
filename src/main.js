@@ -12,7 +12,20 @@ const content = [
 		type: 'text'
 	},
 	{
+		id: 'alien' ,
+		type: 'text',
+		font: 'courier'
+	},
+	{
+		id: 'watt-2' ,
+		type: 'text'
+	},
+	{
 		id: 'the-dead',
+		type: 'text'
+	},
+	{
+		id: 'ALP',
 		type: 'text'
 	},
 	{
@@ -41,9 +54,10 @@ const els = Promise.all(order.map(async index => {
 		'pv4',
 		'bb'
 	)
+	if (item.font) el.classList.add(item.font);
 
 	if (item.type === 'text') {
-		el.innerText = await fetch(`http://theoleanse.com/RlVDSw-/texts/${item.id}.txt`).then(res => res.text());
+		el.innerText = await fetch(`./texts/${item.id}.txt`).then(res => res.text());
 	} else if (item.type === 'video') {
 		el.innerHTML = `<iframe
 			width="100%"
