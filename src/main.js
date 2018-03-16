@@ -52,10 +52,10 @@ const els = Promise.all(order.map(async index => {
 		'lh-copy',
 		'f5', 'f3-ns',
 		'pv4',
-		'bb',
-		'tj'
+		'bb'
 	)
-	if (item.font) el.classList.add(item.font);
+
+	item.font === 'courier' ? el.classList.add(item.font) : el.classList.add('tj');
 
 	if (item.type === 'text') {
 		el.innerText = await fetch(`./texts/${item.id}.txt`).then(res => res.text());
