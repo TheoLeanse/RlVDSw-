@@ -52,7 +52,8 @@ const els = Promise.all(order.map(async index => {
 		'lh-copy',
 		'f5', 'f3-ns',
 		'pv4',
-		'bb'
+		'bb',
+		'tj'
 	)
 	if (item.font) el.classList.add(item.font);
 
